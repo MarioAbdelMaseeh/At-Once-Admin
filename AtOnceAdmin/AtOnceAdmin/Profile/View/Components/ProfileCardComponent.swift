@@ -24,13 +24,21 @@ struct ProfileCardComponent: View {
                 Text("Hamada Hamada")
                     .fontWeight(.semibold)
                 
-                Text("See Account Details")
-                    .foregroundColor(Color.primaryColor)
-                    .font(.subheadline)
+                HStack {
+                    Image(systemName: "phone.fill")
+                        .font(.system(size: 18))
+                        .foregroundColor(.primaryColor)
+                    Text("01096213262")
+                        .foregroundColor(Color.primary)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                }
+                
             }
             
             Spacer()
             
+            /*
             Button(action: {
                 // go to account details
             }) {
@@ -40,6 +48,7 @@ struct ProfileCardComponent: View {
                     .background(Color.black)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
             }
+             */
         }
         .padding()
         .background(Color.white)
