@@ -17,6 +17,7 @@ struct Login: View {
             
             Image(systemName: "person.circle.fill")
                 .resizable()
+                .scaledToFit()
                 .frame(width: 128, height: 128)
                 .clipShape(Circle())
                 .foregroundColor(Color.primaryColor)
