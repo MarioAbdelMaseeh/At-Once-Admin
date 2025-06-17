@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OrdersSearchBarComponent: View {
+struct SearchBarComponent: View {
     
     @Binding var searchText: String
     
@@ -27,5 +27,5 @@ struct OrdersSearchBarComponent: View {
 }
 
 #Preview {
-    OrdersSearchBarComponent(searchText: .constant(""))
+    SearchBarComponent(searchText: .constant(""))
 }
