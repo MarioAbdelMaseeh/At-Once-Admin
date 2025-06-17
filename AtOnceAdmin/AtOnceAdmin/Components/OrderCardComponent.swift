@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ControlPanelOrderCardComponent: View {
+struct OrderCardComponent: View {
     var body: some View {
         
         HStack {
@@ -33,5 +33,5 @@ struct ControlPanelOrderCardComponent: View {
 }
 
 #Preview {
-    ControlPanelOrderCardComponent()
+    OrderCardComponent()
 }

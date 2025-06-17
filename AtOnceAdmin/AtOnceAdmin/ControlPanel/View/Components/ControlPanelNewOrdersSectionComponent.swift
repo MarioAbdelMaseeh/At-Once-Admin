@@ -21,7 +21,7 @@ struct ControlPanelNewOrdersSectionComponent: View {
             }
             
             ForEach(0..<3) { _ in
-                ControlPanelOrderCardComponent()
+                OrderCardComponent()
             }
         }.padding()
         
