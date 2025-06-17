@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileOptionRowComponent: View {
+struct OptionRowComponent: View {
     
     var iconName: String
     var title: String
@@ -40,7 +40,7 @@ struct ProfileOptionRowComponent: View {
 }
 
 #Preview {
-    ProfileOptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
-    ProfileOptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
-    ProfileOptionRowComponent(iconName: "door.right.hand.open", title: "Logout", isDestructive: true)
+    OptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
+    OptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
+    OptionRowComponent(iconName: "door.right.hand.open", title: "Logout", isDestructive: true)
 }

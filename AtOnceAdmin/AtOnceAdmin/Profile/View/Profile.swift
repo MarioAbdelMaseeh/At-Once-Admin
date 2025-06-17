@@ -21,9 +21,9 @@ struct Profile: View {
             Spacer().frame(height: 16)
             
             VStack(spacing: 16) {
-                ProfileOptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
-                ProfileOptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
-                ProfileOptionRowComponent(iconName: "door.right.hand.open", title: "Logout", isDestructive: true)
+                OptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
+                OptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
+                OptionRowComponent(iconName: "door.right.hand.open", title: "Logout", isDestructive: true)
             }
             .padding(.horizontal)
             
