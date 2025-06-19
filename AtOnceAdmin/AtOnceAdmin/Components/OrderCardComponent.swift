@@ -20,7 +20,7 @@ struct OrderCardComponent: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Hamada Pharma Company")
                         .font(.subheadline)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                     Text("3 New orders")
                         .font(.subheadline)
                         .foregroundColor(Color.teal)
@@ -28,10 +28,10 @@ struct OrderCardComponent: View {
                 Spacer()
                 Text("199 EGP")
                     .font(.subheadline)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
             }
             .padding()
-            .background(Color.white)
+            .background(Color("CardBackgroundColor"))
             .cornerRadius(8)
             .shadow(radius: 1)
         }.navigationDestination(isPresented: $navigateToWarehouseOrders) {

@@ -23,7 +23,7 @@ struct ControlPanelNewOrdersSectionComponent: View {
                 }){
                     Text("See more")
                         .font(.subheadline)
-                        .foregroundColor(.primaryColor)
+                        .foregroundColor(.teal)
                 }.navigationDestination(isPresented: $navigateToOrders) {
                     Orders(orderStatus: .new)
                 }

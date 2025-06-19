@@ -27,8 +27,15 @@ struct Login: View {
                 
                 Spacer().frame(height: 32)
                 
-                Text("Welcome To \n At Once Admin !")
-                    .font(.system(size: 28, weight: .bold))
+                Text("Welcome back !")
+                    .font(.system(size: 24, weight: .bold))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.primaryColor)
+                
+                Spacer().frame(height: 4)
+                
+                Text("To Continue , Login Now")
+                    .font(.system(size: 14, weight: .semibold))
                     .multilineTextAlignment(.center)
                 
                 Spacer().frame(height: 32)

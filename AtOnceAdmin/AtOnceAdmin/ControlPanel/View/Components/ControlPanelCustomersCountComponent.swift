@@ -14,14 +14,14 @@ struct ControlPanelCustomersCountComponent: View {
     var body: some View {
         
         RoundedRectangle(cornerRadius: 12)
-            .fill(Color(.systemBackground))
+            .fill(Color("CardBackgroundColor"))
             .shadow(color: .gray.opacity(0.2), radius: 4, x: 0, y: 2)
             .frame(height: 80)
             .overlay(
                 VStack(spacing: 8) {
                     Text("Customers Count")
                         .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                     
                     Text("\(count)")
                         .font(.system(size: 22, weight: .bold))
