@@ -53,7 +53,7 @@ struct Drawer: View {
                 }) {
                     OptionRowComponent(iconName: "person.crop.circle", title: "Profile", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToProfile) {
-                    Profile()
+                    Profile().environmentObject(appState)
                 }
                 
                 Divider()

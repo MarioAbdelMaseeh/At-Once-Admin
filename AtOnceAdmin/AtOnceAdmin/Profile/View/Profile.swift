@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Profile: View {
+    
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         
         VStack(spacing: 24) {
@@ -23,7 +26,13 @@ struct Profile: View {
             VStack(spacing: 16) {
                 OptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
                 OptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
-                OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
+                
+                // Logout
+                Button(action: {
+                    appState.logout()
+                }) {
+                    OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
+                }
             }
             .padding(.horizontal)
             
@@ -54,5 +63,5 @@ struct Profile: View {
 }
 
 #Preview {
-    Profile()
+    Profile().environmentObject(AppState())
 }

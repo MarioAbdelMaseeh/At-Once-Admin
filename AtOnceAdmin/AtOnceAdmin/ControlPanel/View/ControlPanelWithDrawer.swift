@@ -16,10 +16,10 @@ struct ControlPanelWithDrawer: View {
     var body: some View {
         
         ZStack(alignment: .leading) {
-            NavigationView {
-                ControlPanel(showDrawer: $showDrawer)
-            }
-            .zIndex(0)
+            
+            ControlPanel(showDrawer: $showDrawer)
+                .environmentObject(appState)
+                .zIndex(0)
             
             if showDrawer {
                 Color.black.opacity(0.3)
@@ -41,6 +41,6 @@ struct ControlPanelWithDrawer: View {
 }
 
 #Preview {
-    ControlPanelWithDrawer()
+    ControlPanelWithDrawer().environmentObject(AppState())
 }
 

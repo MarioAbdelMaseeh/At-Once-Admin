@@ -23,7 +23,7 @@ struct RootView: View {
                     appState.login()
                 }
             }
-        }
+        }.id(appState.isLoggedIn) // Force view refresh on login/logout
     }
 }
 
