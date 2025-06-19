@@ -75,17 +75,17 @@ struct ControlPanelChartComponent: View {
                                 .fill(slice.color)
                                 .frame(width: 10, height: 10)
                             Text(slice.label)
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                             Spacer()
                             Text("\(slice.value)")
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                         }
                     }
                 }
                 .padding(.leading)
             }
             .padding()
-            .background(Color.white)
+            .background(Color("CardBackgroundColor"))
             .cornerRadius(12)
             .shadow(radius: 4)
         }

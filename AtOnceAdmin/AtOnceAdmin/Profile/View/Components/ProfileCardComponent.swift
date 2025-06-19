@@ -16,7 +16,7 @@ struct ProfileCardComponent: View {
                 .scaledToFill()
                 .frame(width: 48, height: 48)
                 .clipShape(Circle())
-                .foregroundColor(Color.black)
+                .foregroundColor(Color.primary)
             
             Spacer().frame(width: 18)
             
@@ -51,7 +51,7 @@ struct ProfileCardComponent: View {
              */
         }
         .padding()
-        .background(Color.white)
+        .background(Color("CardBackgroundColor"))
         .cornerRadius(16)
         .shadow(radius: 4)
         .padding(.horizontal)

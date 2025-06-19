@@ -41,7 +41,7 @@ struct WarehouseOrderCardComponent: View {
             
             Text("Manchester Pharmacy")
                 .font(.system(size: 16, weight: .medium))
-                .foregroundColor(.primaryColor)
+                .foregroundColor(.teal)
             
             HStack {
                 
@@ -56,7 +56,7 @@ struct WarehouseOrderCardComponent: View {
             }
         }
         .padding()
-        .background(Color.white)
+        .background(Color("CardBackgroundColor"))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.125), radius: 4, x: 0, y: 2)
         

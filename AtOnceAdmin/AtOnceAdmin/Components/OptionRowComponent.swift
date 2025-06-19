@@ -33,7 +33,7 @@ struct OptionRowComponent: View {
         .padding(.vertical, 12)
         .padding(.horizontal, 24)
         .frame(maxWidth: .infinity, minHeight: 40)
-        .background(Color.white)
+        .background(Color("CardBackgroundColor"))
         .cornerRadius(12)
         
     }

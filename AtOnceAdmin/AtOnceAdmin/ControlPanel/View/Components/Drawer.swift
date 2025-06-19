@@ -114,7 +114,7 @@ struct Drawer: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
+        .background(Color("CardBackgroundColor"))
         
         
     }
