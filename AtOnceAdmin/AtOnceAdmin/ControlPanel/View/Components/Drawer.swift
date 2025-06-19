@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Drawer: View {
     
+    @EnvironmentObject var appState: AppState
+    
     @State private var navigateToProfile = false
     @State private var navigateToCustomers = false
     
@@ -51,7 +53,7 @@ struct Drawer: View {
                 }) {
                     OptionRowComponent(iconName: "person.crop.circle", title: "Profile", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToProfile) {
-                    Profile()
+                    Profile().environmentObject(appState)
                 }
                 
                 Divider()
@@ -104,7 +106,7 @@ struct Drawer: View {
             
             // Logout
             Button(action: {
-                
+                appState.logout()
             }){
                 OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
             }
@@ -119,5 +121,5 @@ struct Drawer: View {
 }
 
 #Preview {
-    Drawer()
+    Drawer().environmentObject(AppState())
 }

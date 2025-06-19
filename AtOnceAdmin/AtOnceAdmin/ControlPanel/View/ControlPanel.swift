@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ControlPanel: View {
     
+    @EnvironmentObject var appState: AppState
+    
     @Binding var showDrawer: Bool
     @State private var navigateToProfile = false
     
@@ -64,12 +66,12 @@ struct ControlPanel: View {
             }
         }
         .navigationDestination(isPresented: $navigateToProfile) {
-            Profile()
+            Profile().environmentObject(appState)
         }
     }
 }
 
 
 #Preview {
-    ControlPanel(showDrawer: .constant(true))
+    ControlPanel(showDrawer: .constant(true)).environmentObject(AppState())
 }

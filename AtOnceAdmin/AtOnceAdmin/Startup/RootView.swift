@@ -9,24 +9,21 @@ import SwiftUI
 
 struct RootView: View {
     
-    @State private var isLoggedIn = false
-    @State private var path = NavigationPath()
+    @StateObject private var appState = AppState()
 
     var body: some View {
-        NavigationStack(path: $path) {
-            if isLoggedIn {
-                // This becomes the new root after login
+        NavigationStack(path: $appState.path) {
+            if appState.isLoggedIn {
                 ControlPanelWithDrawer()
-                    .navigationBarBackButtonHidden(true) // hides back
-                    .toolbarRole(.editor) // disables swipe back gesture
+                    .environmentObject(appState)
+                    .navigationBarBackButtonHidden(true)
+                    .toolbarRole(.editor) // disables swipe back
             } else {
-                // Pass callback to update login state
                 Login {
-                    isLoggedIn = true
-                    path.removeLast(path.count) // clears stack
+                    appState.login()
                 }
             }
-        }.tint(.primary)
+        }.id(appState.isLoggedIn) // Force view refresh on login/logout
     }
 }
 
