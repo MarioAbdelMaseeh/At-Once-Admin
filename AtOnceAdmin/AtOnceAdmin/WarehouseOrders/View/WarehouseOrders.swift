@@ -23,8 +23,15 @@ struct WarehouseOrders: View {
                 .padding(.top, 16)
             }
         }
-        
-        
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal){
+                Text("Warehouse Orders")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+            }
+        }
+
     }
 }
 

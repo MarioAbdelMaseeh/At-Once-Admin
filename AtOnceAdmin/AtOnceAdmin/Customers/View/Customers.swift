@@ -24,6 +24,14 @@ struct Customers: View {
                 .padding()
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal){
+                Text("Customers")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+            }
+        }
         
     }
 }

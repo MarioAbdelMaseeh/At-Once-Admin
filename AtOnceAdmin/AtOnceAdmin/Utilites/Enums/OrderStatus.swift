@@ -11,12 +11,12 @@ import SwiftUICore
 enum OrderStatus {
     case new, delivered, cancelled, returned
     
-    var label: String {
+    var title: String {
         switch self {
-        case .new: return "New"
-        case .delivered: return "Delivered"
-        case .cancelled: return "Cancelled"
-        case .returned: return "Returned"
+        case .new: return "New Orders"
+        case .delivered: return "Delivered Orders"
+        case .cancelled: return "Cancelled Orders"
+        case .returned: return "Returned Orders"
         }
     }
     
@@ -26,6 +26,15 @@ enum OrderStatus {
         case .delivered: return Color.green
         case .cancelled: return Color.red
         case .returned: return Color.orange
+        }
+    }
+    
+    var value: String {
+        switch self {
+        case .new: return "New"
+        case .delivered: return "Delivered"
+        case .cancelled: return "Cancelled"
+        case .returned: return "Returned"
         }
     }
 }

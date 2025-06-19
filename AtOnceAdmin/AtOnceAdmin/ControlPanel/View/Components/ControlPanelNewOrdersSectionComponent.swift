@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ControlPanelNewOrdersSectionComponent: View {
+    
+    @State private var navigateToOrders = false
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 10) {
@@ -15,9 +18,16 @@ struct ControlPanelNewOrdersSectionComponent: View {
                 Text("New Orders")
                     .font(.headline)
                 Spacer()
-                Text("See more")
-                    .font(.subheadline)
-                    .foregroundColor(.primaryColor)
+                Button(action: {
+                    navigateToOrders = true
+                }){
+                    Text("See more")
+                        .font(.subheadline)
+                        .foregroundColor(.primaryColor)
+                }.navigationDestination(isPresented: $navigateToOrders) {
+                    Orders(orderStatus: .new)
+                }
+
             }
             
             ForEach(0..<3) { _ in
