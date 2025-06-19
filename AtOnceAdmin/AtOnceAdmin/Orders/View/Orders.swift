@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Orders: View {
+    
+    var orderStatus: OrderStatus
+    
     var body: some View {
         
         VStack {
@@ -25,9 +28,18 @@ struct Orders: View {
             }
             
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal){
+                Text(orderStatus.title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+            }
+        }
+        
     }
 }
 
 #Preview {
-    Orders()
+    Orders(orderStatus: .new)
 }

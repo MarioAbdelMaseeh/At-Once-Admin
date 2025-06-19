@@ -12,7 +12,7 @@ struct Profile: View {
         
         VStack(spacing: 24) {
             
-            ProfileHeaderComponent()
+            //ProfileHeaderComponent()
             
             ProfileCardComponent()
             
@@ -23,15 +23,34 @@ struct Profile: View {
             VStack(spacing: 16) {
                 OptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
                 OptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
-                OptionRowComponent(iconName: "door.right.hand.open", title: "Logout", isDestructive: true)
+                OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
             }
             .padding(.horizontal)
             
             Spacer()
         }
         .padding(.top, 16)
-        
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal){
+                Text("Profile")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+            }
+
+            // Right: Language Icon
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    // handle language switch
+                }) {
+                    Image(systemName: "translate")
+                        .font(.system(size: 20))
+                        .foregroundColor(.primary)
+                }
+            }
+        }
     }
+    
 }
 
 #Preview {

@@ -16,7 +16,7 @@ struct WarehouseOrderCardComponent: View {
         VStack(alignment: .leading, spacing: 8) {
             
             HStack {
-                Text(status.label)
+                Text(status.value)
                     .font(.caption)
                     .bold()
                     .foregroundColor(.white)

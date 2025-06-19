@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct Drawer: View {
+    
+    @State private var navigateToProfile = false
+    @State private var navigateToCustomers = false
+    
+    @State private var navigateToNewOrders = false
+    @State private var navigateToDeliveredOrders = false
+    @State private var navigateToCancelledOrders = false
+    @State private var navigateToReturnedOrders = false
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
@@ -37,12 +46,56 @@ struct Drawer: View {
             
             // Menu Items
             VStack(alignment: .leading, spacing: 16) {
-                OptionRowComponent(iconName: "person.fill", title: "Profile", isDestructive: false)
-                OptionRowComponent(iconName: "person.2.fill", title: "Customers", isDestructive: false)
-                OptionRowComponent(iconName: "star.fill", title: "New Orders", isDestructive: false)
-                OptionRowComponent(iconName: "cube.box.fill", title: "Delivered Orders", isDestructive: false)
-                OptionRowComponent(iconName: "xmark.circle.fill", title: "Cancelled Orders", isDestructive: false)
-                OptionRowComponent(iconName: "archivebox.fill", title: "Returned Orderes", isDestructive: false)
+                Button(action: {
+                    navigateToProfile = true
+                }) {
+                    OptionRowComponent(iconName: "person.crop.circle", title: "Profile", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToProfile) {
+                    Profile()
+                }
+                
+                Divider()
+                
+                Button(action: {
+                    navigateToCustomers = true
+                }) {
+                    OptionRowComponent(iconName: "person.2", title: "Customers", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToCustomers) {
+                    Customers()
+                }
+                
+                Button(action: {
+                    navigateToNewOrders = true
+                }) {
+                    OptionRowComponent(iconName: "star", title: "New Orders", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToNewOrders) {
+                    Orders(orderStatus: .new)
+                }
+                
+                Button(action: {
+                    navigateToDeliveredOrders = true
+                }) {
+                    OptionRowComponent(iconName: "truck.box", title: "Delivered Orders", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToDeliveredOrders) {
+                    Orders(orderStatus: .delivered)
+                }
+                
+                Button(action: {
+                    navigateToCancelledOrders = true
+                }) {
+                    OptionRowComponent(iconName: "x.circle", title: "Cancelled Orders", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToCancelledOrders) {
+                    Orders(orderStatus: .cancelled)
+                }
+                
+                Button(action: {
+                    navigateToReturnedOrders = true
+                }) {
+                    OptionRowComponent(iconName: "arrow.down.square", title: "Returned Orderes", isDestructive: false)
+                }.navigationDestination(isPresented: $navigateToReturnedOrders) {
+                    Orders(orderStatus: .returned)
+                }
+                
             }
             .padding(.top, 16)
             
@@ -50,7 +103,11 @@ struct Drawer: View {
                 .padding(.vertical, 16)
             
             // Logout
-            OptionRowComponent(iconName: "arrow.backward.square", title: "Logout", isDestructive: true)
+            Button(action: {
+                
+            }){
+                OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
+            }
             
             Spacer()
         }
