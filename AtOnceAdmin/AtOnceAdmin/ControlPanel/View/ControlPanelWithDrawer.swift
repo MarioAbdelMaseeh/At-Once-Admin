@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ControlPanelWithDrawer: View {
     
+    @EnvironmentObject var appState: AppState
+    
     @State private var showDrawer = false
     
     var body: some View {
@@ -29,7 +31,7 @@ struct ControlPanelWithDrawer: View {
                     }
             }
             
-            Drawer()
+            Drawer().environmentObject(appState) // use the shared one
                 .frame(width: UIScreen.main.bounds.width * 0.80)
                 .offset(x: showDrawer ? 0 : -UIScreen.main.bounds.width)
                 .animation(.easeInOut(duration: 0.25), value: showDrawer)
