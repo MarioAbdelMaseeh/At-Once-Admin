@@ -13,10 +13,10 @@ enum OrderStatus {
     
     var title: LocalizedStringKey {
         switch self {
-        case .new: return "order_status_new"
-        case .delivered: return "order_status_delivered"
-        case .cancelled: return "order_status_cancelled"
-        case .returned: return "order_status_returned"
+        case .new: return "order_status_new_orders"
+        case .delivered: return "order_status_delivered_orders"
+        case .cancelled: return "order_status_cancelled_orders"
+        case .returned: return "order_status_returned_orders"
         }
     }
     
@@ -31,10 +31,10 @@ enum OrderStatus {
     
     var value: String {
         switch self {
-        case .new: return "New"
-        case .delivered: return "Delivered"
-        case .cancelled: return "Cancelled"
-        case .returned: return "Returned"
+        case .new: return "order_status_new"
+        case .delivered: return "order_status_delivered"
+        case .cancelled: return "order_status_cancelled"
+        case .returned: return "order_status_returned"
         }
     }
 }

@@ -23,9 +23,12 @@ struct ControlPanelRevenueCardComponent: View {
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.primary)
                     
-                    Text("\(revenue.formattedWithSeparator()) EGP")
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(Color.teal)
+                    HStack(spacing: 4) {
+                        Text(revenue.formattedWithSeparator())
+                        Text(Currency.egp.title)
+                    }
+                    .font(.system(size: 22, weight: .bold))
+                    .foregroundColor(Color.teal)
                 }
             )
             .padding(.horizontal, 16)

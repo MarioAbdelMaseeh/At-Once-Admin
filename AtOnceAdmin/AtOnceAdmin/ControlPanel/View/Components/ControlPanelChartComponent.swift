@@ -74,7 +74,7 @@ struct ControlPanelChartComponent: View {
                             Circle()
                                 .fill(slice.color)
                                 .frame(width: 10, height: 10)
-                            Text(slice.label)
+                            Text(localizedLabel(for: slice.label))
                                 .foregroundColor(.primary)
                             Spacer()
                             Text("\(slice.value)")
@@ -114,9 +114,19 @@ struct PieSlice: Shape {
     }
 }
 
+private func localizedLabel(for key: String) -> LocalizedStringKey {
+    switch key.lowercased() {
+    case "new": return "order_status_new"
+    case "delivered": return "order_status_delivered"
+    case "cancelled", "canceled": return "order_status_cancelled"
+    case "returned": return "order_status_returned"
+    default: return LocalizedStringKey(key)
+    }
+}
+
 #Preview {
     ControlPanelChartComponent(data: [
-        "New Orders": 120,
+        "New": 120,
         "Delivered": 30,
         "Canceled": 150,
         "Returned": 10
