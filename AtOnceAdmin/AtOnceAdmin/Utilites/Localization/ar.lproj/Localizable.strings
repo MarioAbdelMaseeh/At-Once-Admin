@@ -24,6 +24,12 @@
 "contact_us" = "تواصل معنا";
 "about_us" = "من نحن";
 "search" = "قم بالبحث ...";
+"currency_egp" = "ج.م";
+
+"order_status_new_orders" = "الطلبات الجديدة";
+"order_status_delivered_orders" = "الطلبات المستلمة";
+"order_status_cancelled_orders" = "الطلبات الملغية";
+"order_status_returned_orders" = "الطلبات المرتجعة";
 
 "order_status_new" = "الطلبات الجديدة";
 "order_status_delivered" = "الطلبات المستلمة";

@@ -24,8 +24,14 @@
 "contact_us" = "Contact US";
 "about_us" = "About Us";
 "search" = "Search...";
+"currency_egp" = "EGP";
 
-"order_status_new" = "New Orders";
-"order_status_delivered" = "Delivered Orders";
-"order_status_cancelled" = "Cancelled Orders";
-"order_status_returned" = "Returned Orders";
+"order_status_new_orders" = "New Orders";
+"order_status_delivered_orders" = "Delivered Orders";
+"order_status_cancelled_orders" = "Cancelled Orders";
+"order_status_returned_orders" = "Returned Orders";
+
+"order_status_new" = "New";
+"order_status_delivered" = "Delivered";
+"order_status_cancelled" = "Cancelled";
+"order_status_returned" = "Returned";

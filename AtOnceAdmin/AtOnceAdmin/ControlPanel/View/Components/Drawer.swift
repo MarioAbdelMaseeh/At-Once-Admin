@@ -69,7 +69,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToNewOrders = true
                 }) {
-                    OptionRowComponent(iconName: "star", title: "order_status_new", isDestructive: false)
+                    OptionRowComponent(iconName: "star", title: "order_status_new_orders", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToNewOrders) {
                     Orders(orderStatus: .new)
                 }
@@ -77,7 +77,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToDeliveredOrders = true
                 }) {
-                    OptionRowComponent(iconName: "truck.box", title: "order_status_delivered", isDestructive: false)
+                    OptionRowComponent(iconName: "truck.box", title: "order_status_delivered_orders", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToDeliveredOrders) {
                     Orders(orderStatus: .delivered)
                 }
@@ -85,7 +85,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToCancelledOrders = true
                 }) {
-                    OptionRowComponent(iconName: "x.circle", title: "order_status_cancelled", isDestructive: false)
+                    OptionRowComponent(iconName: "x.circle", title: "order_status_cancelled_orders", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToCancelledOrders) {
                     Orders(orderStatus: .cancelled)
                 }
@@ -93,7 +93,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToReturnedOrders = true
                 }) {
-                    OptionRowComponent(iconName: "arrow.down.square", title: "order_status_returned", isDestructive: false)
+                    OptionRowComponent(iconName: "arrow.down.square", title: "order_status_returned_orders", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToReturnedOrders) {
                     Orders(orderStatus: .returned)
                 }
