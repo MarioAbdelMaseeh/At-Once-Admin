@@ -1,0 +1,31 @@
+/*
+ Localizable.strings
+ AtOnceAdmin
+ 
+ Created by Adham Mohamed on 20/06/2025.
+ 
+ */
+
+"app_name" = "AtOnce-Admin";
+"login" = "Login";
+"password" = "Password";
+"email" = "Email";
+"to_continue_login_now" = "To continue , Login now";
+"welcome_back" = "Welcome back !";
+"control_panel" = "Control Panel";
+"customers_count" = "Customers Count";
+"revenue" = "Revenue";
+"order_status_overview" = "Order Status OverView";
+"profile" = "Profile";
+"customers" = "Customers";
+"logout" = "Logout";
+"see_more" = "See more";
+"orders_count" = "Orders Count %1$@";
+"contact_us" = "Contact US";
+"about_us" = "About Us";
+"search" = "Search...";
+
+"order_status_new" = "New Orders";
+"order_status_delivered" = "Delivered Orders";
+"order_status_cancelled" = "Cancelled Orders";
+"order_status_returned" = "Returned Orders";

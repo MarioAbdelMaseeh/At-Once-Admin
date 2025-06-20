@@ -48,7 +48,7 @@ struct ControlPanelChartComponent: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Orders Status Overview")
+            Text("order_status_overview")
                 .font(.title3)
                 .bold()
             

@@ -15,13 +15,13 @@ struct ControlPanelNewOrdersSectionComponent: View {
         
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text("New Orders")
+                Text("order_status_new")
                     .font(.headline)
                 Spacer()
                 Button(action: {
                     navigateToOrders = true
                 }){
-                    Text("See more")
+                    Text("see_more")
                         .font(.subheadline)
                         .foregroundColor(.teal)
                 }.navigationDestination(isPresented: $navigateToOrders) {

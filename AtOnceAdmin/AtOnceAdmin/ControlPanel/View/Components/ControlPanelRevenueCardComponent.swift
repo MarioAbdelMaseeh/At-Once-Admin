@@ -19,7 +19,7 @@ struct ControlPanelRevenueCardComponent: View {
             .frame(height: 80)
             .overlay(
                 VStack(spacing: 8) {
-                    Text("Revenue")
+                    Text("revenue")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.primary)
                     

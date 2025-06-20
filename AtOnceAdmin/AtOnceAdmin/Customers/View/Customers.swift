@@ -27,7 +27,7 @@ struct Customers: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal){
-                Text("Customers")
+                Text("customers")
                     .font(.title3)
                     .fontWeight(.semibold)
             }

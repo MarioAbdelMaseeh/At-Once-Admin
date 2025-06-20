@@ -25,7 +25,7 @@ struct ControlPanel: View {
                 ControlPanelNewOrdersSectionComponent()
                 ControlPanelRevenueCardComponent(revenue: 10000)
                 ControlPanelChartComponent(data: [
-                    "New Orders": 120,
+                    "New": 120,
                     "Delivered": 30,
                     "Canceled": 150,
                     "Returned": 10
@@ -36,7 +36,7 @@ struct ControlPanel: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal){
-                Text("Control Panel")
+                Text("control_panel")
                     .font(.title3)
                     .fontWeight(.semibold)
             }

@@ -11,12 +11,12 @@ import SwiftUICore
 enum OrderStatus {
     case new, delivered, cancelled, returned
     
-    var title: String {
+    var title: LocalizedStringKey {
         switch self {
-        case .new: return "New Orders"
-        case .delivered: return "Delivered Orders"
-        case .cancelled: return "Cancelled Orders"
-        case .returned: return "Returned Orders"
+        case .new: return "order_status_new"
+        case .delivered: return "order_status_delivered"
+        case .cancelled: return "order_status_cancelled"
+        case .returned: return "order_status_returned"
         }
     }
     

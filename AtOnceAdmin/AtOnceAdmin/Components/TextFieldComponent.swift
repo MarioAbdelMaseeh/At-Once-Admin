@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextFieldComponent: View {
     
-    var title: String
+    var title: LocalizedStringKey
     @Binding var text: String
     var isSecure: Bool = false
     @State private var isPasswordVisible = false
