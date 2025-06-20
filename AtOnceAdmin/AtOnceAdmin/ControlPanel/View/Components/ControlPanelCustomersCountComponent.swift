@@ -19,7 +19,7 @@ struct ControlPanelCustomersCountComponent: View {
             .frame(height: 80)
             .overlay(
                 VStack(spacing: 8) {
-                    Text("Customers Count")
+                    Text("customers_count")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.primary)
                     

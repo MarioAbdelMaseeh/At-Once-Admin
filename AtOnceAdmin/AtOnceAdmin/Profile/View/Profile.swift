@@ -24,14 +24,14 @@ struct Profile: View {
             Spacer().frame(height: 16)
             
             VStack(spacing: 16) {
-                OptionRowComponent(iconName: "headphones", title: "Contact US", isDestructive: false)
-                OptionRowComponent(iconName: "info.circle", title: "About US", isDestructive: false)
+                OptionRowComponent(iconName: "headphones", title: "contact_us", isDestructive: false)
+                OptionRowComponent(iconName: "info.circle", title: "about_us", isDestructive: false)
                 
                 // Logout
                 Button(action: {
                     appState.logout()
                 }) {
-                    OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
+                    OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "logout", isDestructive: true)
                 }
             }
             .padding(.horizontal)
@@ -42,7 +42,7 @@ struct Profile: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal){
-                Text("Profile")
+                Text("profile")
                     .font(.title3)
                     .fontWeight(.semibold)
             }

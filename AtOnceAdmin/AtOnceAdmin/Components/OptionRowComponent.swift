@@ -10,7 +10,7 @@ import SwiftUI
 struct OptionRowComponent: View {
     
     var iconName: String
-    var title: String
+    var title: LocalizedStringKey
     var isDestructive: Bool = false
     
     var body: some View {

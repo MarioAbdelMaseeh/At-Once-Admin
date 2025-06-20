@@ -16,7 +16,7 @@ struct SearchBarComponent: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
             
-            TextField("Search...", text: $searchText)
+            TextField("search", text: $searchText)
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding(8)
         }

@@ -27,31 +27,31 @@ struct Login: View {
                 
                 Spacer().frame(height: 32)
                 
-                Text("Welcome back !")
+                Text("welcome_back")
                     .font(.system(size: 24, weight: .bold))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.primaryColor)
                 
                 Spacer().frame(height: 4)
                 
-                Text("To Continue , Login Now")
+                Text("to_continue_login_now")
                     .font(.system(size: 14, weight: .semibold))
                     .multilineTextAlignment(.center)
                 
                 Spacer().frame(height: 32)
                 
-                TextFieldComponent(title: "Email", text: $email, isSecure: false)
+                TextFieldComponent(title: "email", text: $email, isSecure: false)
                     .padding(.horizontal, 16)
                 
                 Spacer().frame(height: 28)
                 
-                TextFieldComponent(title: "Password", text: $password, isSecure: true)
+                TextFieldComponent(title: "password", text: $password, isSecure: true)
                     .padding(.horizontal, 16)
                 
                 Spacer().frame(height: 48)
                 
                 
-                Button("Login") {
+                Button("login") {
                     // Validate email/password or call API
                     onLoginSuccess() //Call this to navigate
                 }

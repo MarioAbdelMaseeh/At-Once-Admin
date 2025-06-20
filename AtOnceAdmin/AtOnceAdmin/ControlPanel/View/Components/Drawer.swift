@@ -51,7 +51,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToProfile = true
                 }) {
-                    OptionRowComponent(iconName: "person.crop.circle", title: "Profile", isDestructive: false)
+                    OptionRowComponent(iconName: "person.crop.circle", title: "profile", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToProfile) {
                     Profile().environmentObject(appState)
                 }
@@ -61,7 +61,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToCustomers = true
                 }) {
-                    OptionRowComponent(iconName: "person.2", title: "Customers", isDestructive: false)
+                    OptionRowComponent(iconName: "person.2", title: "customers", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToCustomers) {
                     Customers()
                 }
@@ -69,7 +69,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToNewOrders = true
                 }) {
-                    OptionRowComponent(iconName: "star", title: "New Orders", isDestructive: false)
+                    OptionRowComponent(iconName: "star", title: "order_status_new", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToNewOrders) {
                     Orders(orderStatus: .new)
                 }
@@ -77,7 +77,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToDeliveredOrders = true
                 }) {
-                    OptionRowComponent(iconName: "truck.box", title: "Delivered Orders", isDestructive: false)
+                    OptionRowComponent(iconName: "truck.box", title: "order_status_delivered", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToDeliveredOrders) {
                     Orders(orderStatus: .delivered)
                 }
@@ -85,7 +85,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToCancelledOrders = true
                 }) {
-                    OptionRowComponent(iconName: "x.circle", title: "Cancelled Orders", isDestructive: false)
+                    OptionRowComponent(iconName: "x.circle", title: "order_status_cancelled", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToCancelledOrders) {
                     Orders(orderStatus: .cancelled)
                 }
@@ -93,7 +93,7 @@ struct Drawer: View {
                 Button(action: {
                     navigateToReturnedOrders = true
                 }) {
-                    OptionRowComponent(iconName: "arrow.down.square", title: "Returned Orderes", isDestructive: false)
+                    OptionRowComponent(iconName: "arrow.down.square", title: "order_status_returned", isDestructive: false)
                 }.navigationDestination(isPresented: $navigateToReturnedOrders) {
                     Orders(orderStatus: .returned)
                 }
@@ -108,7 +108,7 @@ struct Drawer: View {
             Button(action: {
                 appState.logout()
             }){
-                OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "Logout", isDestructive: true)
+                OptionRowComponent(iconName: "rectangle.portrait.and.arrow.forward", title: "logout", isDestructive: true)
             }
             
             Spacer()
