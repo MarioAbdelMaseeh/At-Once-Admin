@@ -1,0 +1,39 @@
+/*
+ Localizable.strings
+ AtOnceAdmin
+ 
+ Created by Adham Mohamed on 20/06/2025.
+ 
+ */
+
+"app_name" = "AtOnce-Admin";
+"login" = "تسجيل الدخول";
+"password" = "الرقم السرى";
+"email" = "البريد الالكترونى";
+"to_continue_login_now" = "قم بتسجيل الدخول للاستمرار";
+"welcome_back" = "مرحبا بك !";
+"control_panel" = "لوحة التحكم";
+"customers_count" = "عدد العملاء";
+"revenue" = "اجمالى الارباح";
+"order_status_overview" = "احصائيات الطلبات";
+"profile" = "الملف الشخصى";
+"customers" = "العملاء";
+"logout" = "تسجيل الخروج";
+"see_more" = "المزيد";
+"orders_count" = "عدد الطلبات %1$@";
+"contact_us" = "تواصل معنا";
+"about_us" = "من نحن";
+"search" = "قم بالبحث ...";
+"currency_egp" = "ج.م";
+
+"order_status_new_orders" = "الطلبات الجديدة";
+"order_status_delivered_orders" = "الطلبات المستلمة";
+"order_status_cancelled_orders" = "الطلبات الملغية";
+"order_status_returned_orders" = "الطلبات المرتجعة";
+
+"order_status_new" = "الطلبات الجديدة";
+"order_status_delivered" = "الطلبات المستلمة";
+"order_status_cancelled" = "الطلبات الملغية";
+"order_status_returned" = "الطلبات المرتجعة";
+
+

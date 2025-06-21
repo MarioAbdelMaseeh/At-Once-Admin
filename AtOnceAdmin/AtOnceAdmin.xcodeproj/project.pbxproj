@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B89116882E06A06E00463E24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B89116872E06A06E00463E24 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		04E76BEC2E0059B800DAAE04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89116882E06A06E00463E24 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = AtOnceAdmin;
 			packageProductDependencies = (
+				B89116872E06A06E00463E24 /* Alamofire */,
 			);
 			productName = AtOnceAdmin;
 			productReference = 04E76BD92E0059B600DAAE04 /* AtOnceAdmin.app */;
@@ -192,9 +198,13 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 04E76BD02E0059B600DAAE04;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B89116862E06A06E00463E24 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 04E76BDA2E0059B600DAAE04 /* Products */;
 			projectDirPath = "";
@@ -550,6 +560,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B89116862E06A06E00463E24 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B89116872E06A06E00463E24 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B89116862E06A06E00463E24 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04E76BD12E0059B600DAAE04 /* Project object */;
 }
