@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ControlPanel: View {
     
+    @StateObject var viewModel = ControlPanelViewModel(useCase: GetControlPanelStatsUseCaseImpl(controlPanelRepository: ControlPanelRepositoryImpl(networkService: NetworkService())))
+    
     @EnvironmentObject var appState: AppState
     
     @Binding var showDrawer: Bool
@@ -19,19 +21,29 @@ struct ControlPanel: View {
     var body: some View {
         
         ScrollView {
-            
-            VStack {
-                ControlPanelCustomersCountComponent(count: 12)
-                ControlPanelNewOrdersSectionComponent()
-                ControlPanelRevenueCardComponent(revenue: 10000)
-                ControlPanelChartComponent(data: [
-                    "New": 120,
-                    "Delivered": 30,
-                    "Canceled": 150,
-                    "Returned": 10
-                ])
+            if viewModel.isLoading{
+                
+            }else if viewModel.errorMessage != nil{
+                
+            }else{
+                VStack {
+                    if let controlPanelStats = viewModel.controlPanelStats {
+                        ControlPanelCustomersCountComponent(count: controlPanelStats.pharmacyCount)
+                        ControlPanelNewOrdersSectionComponent()
+                        ControlPanelRevenueCardComponent(revenue: Int(controlPanelStats.revenue))
+                        ControlPanelChartComponent(data: [
+                            "New": controlPanelStats.stats.ordered,
+                            "Delivered": controlPanelStats.stats.delivered,
+                            "Canceled": controlPanelStats.stats.cancelled,
+                            "Returned":controlPanelStats.stats.returned
+                        ])
+                    }
+                    
+                }.padding(.top, 16)
+                    .onAppear {
+                        viewModel.fetchControlPanelStats(representativeId: 1)
+                    }
             }
-            .padding(.top, 16)
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
