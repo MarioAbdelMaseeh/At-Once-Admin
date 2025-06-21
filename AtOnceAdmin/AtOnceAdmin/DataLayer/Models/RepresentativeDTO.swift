@@ -5,13 +5,13 @@
 //  Created by mac on 21/06/2025.
 //
 
-struct LoginResponse: Encodable {
+struct LoginResponseDTO: Codable {
     var token: String
     var message: String
     var success: Bool
-    var representativeDTO: RepresentativeDTO
+    var representative: RepresentativeDTO
 }
-struct RepresentativeDTO: Encodable{
+struct RepresentativeDTO: Codable{
     var id: Int
     var code: String
     var name: String

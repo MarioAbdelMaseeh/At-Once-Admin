@@ -9,11 +9,16 @@ import SwiftUI
 
 struct Login: View {
     
-    var onLoginSuccess: () -> Void
+    var onLoginSuccess: () -> Void 
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @StateObject var viewModel: LoginViewModel
     
+    init(onLoginSuccess: @escaping () -> Void) {
+        self._viewModel = StateObject(wrappedValue: LoginViewModel(useCase: LoginUseCaseImpl(authRepo: AuthRepositoryImpl(network: NetworkService()))))
+        self.onLoginSuccess = onLoginSuccess
+    }
     var body: some View {
         NavigationStack {
             VStack {
@@ -50,10 +55,25 @@ struct Login: View {
                 
                 Spacer().frame(height: 48)
                 
+                if viewModel.isLoading {
+                    ProgressView()
+                        .padding(.top, 16)
+                }
+                
+                // ✅ Error Message
+                if let error = viewModel.errorMessage {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .font(.footnote)
+                        .padding(.top, 8)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 16)
+                }
                 
                 Button("login") {
+                    viewModel.login(email: email, password: password)
                     // Validate email/password or call API
-                    onLoginSuccess() //Call this to navigate
+                    /*onLoginSuccess()*/ //Call this to navigate
                 }
                 .frame(maxWidth: .infinity, maxHeight: 60)
                 .font(.system(size: 18, weight: .bold))
@@ -61,6 +81,12 @@ struct Login: View {
                 .background(Color.primaryColor)
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
+                .onReceive(viewModel.$loginResponse) { response in
+                    print(response?.success)
+                    if ((response?.success) != nil) {
+                        onLoginSuccess()
+                    }
+                }
             }
             .padding(.top, 32)
             Spacer()

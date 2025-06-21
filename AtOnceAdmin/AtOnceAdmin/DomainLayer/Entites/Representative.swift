@@ -4,10 +4,14 @@
 //
 //  Created by mac on 21/06/2025.
 //
-
+struct LoginResponse{
+    var token: String
+    var message: String
+    var success: Bool
+    var representative: Representative
+}
 struct Representative{
     var id: Int
-    var token: String
     var code: String
     var name: String
     var address: String

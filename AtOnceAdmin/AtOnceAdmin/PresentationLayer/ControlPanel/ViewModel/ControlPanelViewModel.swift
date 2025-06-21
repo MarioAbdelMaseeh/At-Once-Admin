@@ -31,13 +31,11 @@ class ControlPanelViewModel: ControlPanelViewModelProtocol {
         
         useCase.excute(representativeId: representativeId).sink { [weak self] completion in
             self?.isLoading = false
-            print("completed")
             if case let .failure(error) = completion{
                 self?.errorMessage = error.localizedDescription
                 print(error.localizedDescription)
             }
         }receiveValue: {[weak self] controlPanelStats in
-            print("Received controlPanelStats: \(controlPanelStats.pharmacyCount)")
             self?.controlPanelStats = controlPanelStats
         }.store(in: &cancellables)
         
