@@ -40,9 +40,7 @@ struct ControlPanel: View {
                     }
                     
                 }.padding(.top, 16)
-                    .onAppear {
-                        viewModel.fetchControlPanelStats(representativeId: 1)
-                    }
+                    
             }
         }
         .navigationBarTitleDisplayMode(.inline)

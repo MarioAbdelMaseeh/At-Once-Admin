@@ -13,7 +13,7 @@ enum ControlPanelAPI: APIRequest{
     case getControlPanelStats(representativeId:Int)
     
     var baseURL: String{
-        "http://predeploypharmaatonceafteredit.somee.com/"
+        "http://www.pharmaatoncepredeploy.somee.com/"
     }
     
     var path: String{
